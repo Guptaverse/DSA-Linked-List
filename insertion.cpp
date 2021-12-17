@@ -15,7 +15,7 @@ class node{
 void build(node*head,int d){
 
 }
-void insertAthead(node*&head,int d){
+void insertAthead(node*&head,int d){   //passing head by reference
     if(head==NULL){
         head = new node(d);
         return;
@@ -24,7 +24,7 @@ void insertAthead(node*&head,int d){
     n->next = head;
     head = n;
 }
-void printList(node*head){
+void printList(node*head){    //passing head by value
     while(head->next!=NULL){
         cout<<head->data<<"->";
         head = head->next;
@@ -41,4 +41,4 @@ int main(){
     printList(head);
     return 0;
 }
-
+//OUTPUT : 1->2->3->4
